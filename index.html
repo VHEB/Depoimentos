@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Depoimentos</title>
+</head>
+<body>
+  <header>
+    <h1>EDUCAÇÃO INOVADORA PARA UM FUTURO SUSTENTÁVEL</h1>
+  </header>
+  <div class="container">
+     <h2>Como colaboramos na formação de cidadãos que podem transformar o mundo</h2>
+  </div>
+ 
+  <!-- Página Inicial -->
+  <div class="container" id="home">
+    <a class="menu-btn" href="#lis">
+      <img src="/IMG/lis_logo.png" alt="Logo LIS">
+    </a>
+
+    <a class="menu-btn" href="#face">
+      <img src="/IMG/face_logo.png" alt="Logo FACE">
+    </a>
+
+    <a class="menu-btn" href="#sus">
+      <img src="/IMG/sustentabilidade_logo.png" alt="Logo Sustentabilidade">
+    </a>
+  </div>
+
+  <!-- LIS -->
+  <div class="container" id="lis" style="display:none;">
+    <a class="back-btn" href="#home">← Voltar</a>
+    <div class="card">
+      <img src="/IMG/lis_logo.png" alt="Capa" />
+      <h2>Título do Depoimento</h2>
+      <p>Descrição breve do depoimento.</p>
+      <audio controls>
+        <source src="audio1.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+  </div>
+
+  <!-- FACE -->
+  <div class="container" id="face" style="display:none;">
+    <a class="back-btn" href="#home">← Voltar</a>
+    <div class="card">
+      <img src="/IMG/face_logo.png" alt="Capa" />
+      <h2>Título FACE</h2>
+      <p>Descrição do depoimento FACE.</p>
+      <audio controls>
+        <source src="audio2.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+  </div>
+
+  <!-- Sustentabilidade -->
+  <div class="container" id="sus" style="display:none;">
+    <a class="back-btn" href="#home">← Voltar</a>
+    <div class="card">
+      <img src="/IMG/sustentabilidade_logo.png" alt="Capa" />
+      <h2>Depoimento Sustentabilidade</h2>
+      <p>Descrição do depoimento para área de sustentabilidade.</p>
+      <audio controls>
+        <source src="audio3.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    // alternar entre "páginas" simples
+    const sections = ["home", "lis", "face", "sus"];
+
+    window.addEventListener("hashchange", () => navigate());
+    function navigate() {
+      const hash = window.location.hash.replace('#', '') || "home";
+      sections.forEach(id => {
+        document.getElementById(id).style.display = (id === hash) ? "block" : "none";
+      });
+    }
+    navigate();
+  </script>
+</body>
+</html>
