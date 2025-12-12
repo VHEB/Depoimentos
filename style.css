@@ -5,73 +5,91 @@ body {
       background: #f4f4f4;
       color: #333;
     }
+:root{
+     --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.2rem;
+    --font-size-h5: 1rem;
+    --font-size-h6: 0.8rem;
+    --font-size-p: 1rem;
+    --font-size-small: 0.8rem;
+}
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+p {
+  font-size: var(--font-size-p);
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background: #004aad;
+  color: white;
+}
 
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #004aad;
-      color: white;
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 8px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      padding: 8px;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
-    }
+/* BOTÕES DO MENU AGORA SÃO IMAGENS */
+.menu-btn {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding-bottom: 16px;
+}
 
-    /* BOTÕES DO MENU AGORA SÃO IMAGENS */
-    .menu-btn {
-      display: block;
-      width: 100%;
-      text-decoration: none;
-      padding-bottom: 16px;
-    }
+.menu-btn img {
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  transition: 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
-    .menu-btn img {
-      width: 100%;
-      max-width: 250px;
-      display: block;
-      margin: auto;
-      border-radius: 12px;
-      transition: 0.2s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
+.menu-btn img:hover {
+  transform: scale(1.03);
+}
 
-    .menu-btn img:hover {
-      transform: scale(1.03);
-    }
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+/* CAPA MENOR */
+.card img {
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    /* CAPA MENOR */
-    .card img {
-      width: 70%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.card audio {
+  width: 100%;
+  margin-top: 10px;
+}
 
-    .card audio {
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin: 20px 0;
-      color: #004aad;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.back-btn {
+  display: inline-block;
+  margin: 20px 0;
+  color: #004aad;
+  text-decoration: none;
+  font-weight: bold;
+}
